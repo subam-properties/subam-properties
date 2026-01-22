@@ -1,0 +1,7 @@
+export { Hero } from './Hero'
+export { Stats } from './Stats'
+export { CityExplorer } from './CityExplorer'
+export { FeaturedProjects } from './FeaturedProjects'
+export { WhyChooseUs } from './WhyChooseUs'
+export { Testimonials } from './Testimonials'
+export { Newsletter } from './Newsletter'
