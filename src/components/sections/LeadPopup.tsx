@@ -67,7 +67,7 @@ export function LeadPopup({ isOpen: controlledOpen, onClose, source = 'welcome' 
       form.append('_template', 'table')
       form.append('_captcha', 'false')
 
-      await fetch('https://formsubmit.co/ajax/athithyavijay@gmail.com', {
+      await fetch('https://formsubmit.co/ajax/subamhousingandproperties@gmail.com', {
         method: 'POST',
         body: form,
       })
