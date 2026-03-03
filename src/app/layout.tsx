@@ -20,6 +20,9 @@ export const metadata: Metadata = {
   title: 'Subam Properties - Premium Plots & Real Estate in Chennai',
   description: 'Discover premium residential plots and projects by Subam Properties in Chennai. DTCP approved plots in Guduvancheri, Kattankulathur & surrounding areas.',
   keywords: 'real estate, plots, land, residential plots, Chennai, Guduvancheri, Kattankulathur, Potheri, Subam Properties, DTCP approved',
+  icons: {
+    icon: '/favicon.svg',
+  },
 }
 
 export default function RootLayout({
