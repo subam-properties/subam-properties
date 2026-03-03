@@ -26,7 +26,7 @@ export function Hero() {
       <div className="absolute inset-0 z-0">
         <img
           src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=1920&q=80"
-          alt="Luxury apartment building"
+          alt="Premium residential property"
           className="w-full h-full object-cover"
         />
         <div className="absolute inset-0 bg-gradient-to-r from-primary-900/90 via-primary-900/70 to-primary-900/50" />
@@ -61,8 +61,8 @@ export function Hero() {
             transition={{ duration: 0.5, delay: 0.2 }}
             className="text-lg md:text-xl text-primary-100 mb-8 max-w-xl"
           >
-            Discover premium residential projects across South India.
-            RERA approved homes with world-class amenities and unmatched quality.
+            Discover premium residential plots and projects in Chennai.
+            DTCP approved plots and RERA approved homes with clear titles and great connectivity.
           </motion.p>
 
           {/* Search Box */}
@@ -72,7 +72,7 @@ export function Hero() {
             transition={{ duration: 0.5, delay: 0.3 }}
             className="bg-white p-6 rounded-2xl shadow-2xl max-w-2xl"
           >
-            <p className="text-primary-900 font-semibold mb-4">Find Your Dream Home</p>
+            <p className="text-primary-900 font-semibold mb-4">Find Your Dream Property</p>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-4">
               <Select
                 value={city}

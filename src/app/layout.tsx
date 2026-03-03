@@ -3,6 +3,8 @@ import { Inter, Montserrat } from 'next/font/google'
 import './globals.css'
 import { Navbar } from '@/components/layout/Navbar'
 import { Footer } from '@/components/layout/Footer'
+import { LeadPopup } from '@/components/sections/LeadPopup'
+import { FloatingCTA } from '@/components/sections/FloatingCTA'
 
 const inter = Inter({
   subsets: ['latin'],
@@ -15,9 +17,9 @@ const montserrat = Montserrat({
 })
 
 export const metadata: Metadata = {
-  title: 'Subam Properties - Premium Real Estate Developer in South India',
-  description: 'Discover premium residential projects by Subam Properties in Chennai, Bangalore, Hyderabad & Coimbatore. RERA approved homes with world-class amenities.',
-  keywords: 'real estate, property, apartments, villas, Chennai, Bangalore, Hyderabad, Coimbatore, Subam Properties',
+  title: 'Subam Properties - Premium Plots & Real Estate in Chennai',
+  description: 'Discover premium residential plots and projects by Subam Properties in Chennai. DTCP approved plots in Guduvancheri, Kattankulathur & surrounding areas.',
+  keywords: 'real estate, plots, land, residential plots, Chennai, Guduvancheri, Kattankulathur, Potheri, Subam Properties, DTCP approved',
 }
 
 export default function RootLayout({
@@ -33,6 +35,8 @@ export default function RootLayout({
           {children}
         </main>
         <Footer />
+        <LeadPopup />
+        <FloatingCTA />
       </body>
     </html>
   )

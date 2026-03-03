@@ -12,8 +12,8 @@ export function Footer() {
               <span className="text-accent">SUBAM</span> PROPERTIES
             </h3>
             <p className="text-primary-200 mb-4 leading-relaxed">
-              {COMPANY.tagline}. Building premium residential projects across
-              South India since 1999.
+              {COMPANY.tagline}. Building premium residential projects and plots
+              across Chennai since 2016.
             </p>
             <div className="flex gap-4">
               {Object.entries(SOCIAL_LINKS).map(([name, url]) => (

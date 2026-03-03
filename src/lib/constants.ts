@@ -1,18 +1,18 @@
 export const COMPANY = {
   name: "Subam Properties",
   tagline: "Building Dreams, Creating Landmarks",
-  phone: "+91 98765 43210",
-  email: "info@subamproperties.com",
-  whatsapp: "919876543210",
-  address: "123, Anna Salai, Chennai - 600002, Tamil Nadu, India",
+  phone: "+91 95009 95004",
+  email: "contact@subamproperties.com",
+  whatsapp: "919500995004",
+  address: "115, GST Main Road, Guduvancheri, Chennai - 603202, Tamil Nadu, India",
 };
 
 export const SOCIAL_LINKS = {
-  facebook: "https://facebook.com/subamproperties",
-  instagram: "https://instagram.com/subamproperties",
-  linkedin: "https://linkedin.com/company/subamproperties",
-  youtube: "https://youtube.com/subamproperties",
-  twitter: "https://twitter.com/subamproperties",
+  facebook: "#",
+  instagram: "#",
+  linkedin: "#",
+  youtube: "#",
+  twitter: "#",
 };
 
 export const NAV_LINKS = [
@@ -22,19 +22,16 @@ export const NAV_LINKS = [
 
 export const CITIES = [
   { name: "Chennai", slug: "chennai" },
-  { name: "Bangalore", slug: "bangalore" },
-  { name: "Hyderabad", slug: "hyderabad" },
-  { name: "Coimbatore", slug: "coimbatore" },
 ];
 
-export const BHK_OPTIONS = ["1 BHK", "2 BHK", "3 BHK", "4 BHK", "5+ BHK"];
+export const BHK_OPTIONS = ["Plot", "2 BHK", "3 BHK", "4 BHK"];
 
 export const BUDGET_RANGES = [
-  { label: "Under ₹50 Lakhs", min: 0, max: 5000000 },
+  { label: "Under ₹30 Lakhs", min: 0, max: 3000000 },
+  { label: "₹30 Lakhs - ₹50 Lakhs", min: 3000000, max: 5000000 },
   { label: "₹50 Lakhs - ₹1 Cr", min: 5000000, max: 10000000 },
   { label: "₹1 Cr - ₹2 Cr", min: 10000000, max: 20000000 },
-  { label: "₹2 Cr - ₹5 Cr", min: 20000000, max: 50000000 },
-  { label: "Above ₹5 Cr", min: 50000000, max: Infinity },
+  { label: "Above ₹2 Cr", min: 20000000, max: Infinity },
 ];
 
 export const PROJECT_STATUS_LABELS: Record<string, string> = {
@@ -66,8 +63,8 @@ export const AMENITIES_ICONS: Record<string, string> = {
 };
 
 export const STATS = [
-  { label: "Years of Trust", value: 25, suffix: "+" },
-  { label: "Projects Delivered", value: 50, suffix: "+" },
-  { label: "Happy Families", value: 10000, suffix: "+" },
-  { label: "Million Sq.ft", value: 15, suffix: "M+" },
+  { label: "Years of Trust", value: 10, suffix: "+" },
+  { label: "Projects Delivered", value: 5, suffix: "+" },
+  { label: "Happy Families", value: 500, suffix: "+" },
+  { label: "Plots Sold", value: 1000, suffix: "+" },
 ];
