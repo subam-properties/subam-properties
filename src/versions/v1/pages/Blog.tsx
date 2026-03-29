@@ -5,7 +5,7 @@ import { blogPosts } from '../mockData'
 export default function BlogPage() {
   return (
     <>
-      <PageHeader title="Blog" subtitle="Real estate insights, guides, and design inspiration" breadcrumbs={[{ label: 'Home', href: '/v1' }]} />
+      <PageHeader title="Blog" subtitle="Real estate insights, guides, and design inspiration" breadcrumbs={[{ label: 'Home', href: '/' }]} />
       <div className="container-custom py-10 lg:py-16">
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {blogPosts.map((post, i) => (

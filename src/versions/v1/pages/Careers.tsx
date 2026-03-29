@@ -6,7 +6,7 @@ import { jobOpenings } from '../mockData'
 export default function CareersPage() {
   return (
     <>
-      <PageHeader title="Careers" subtitle="Join our team and build the future of Chennai's real estate" breadcrumbs={[{ label: 'Home', href: '/v1' }]} />
+      <PageHeader title="Careers" subtitle="Join our team and build the future of Chennai's real estate" breadcrumbs={[{ label: 'Home', href: '/' }]} />
       <div className="container-custom py-10 lg:py-16">
         <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="max-w-3xl mb-12">
           <h2 className="text-2xl font-heading font-bold text-primary-900 mb-4">Why Join Subam Properties?</h2>

@@ -14,7 +14,7 @@ const allTestimonials = [...testimonials, ...extraTestimonials]
 export default function TestimonialsFullPage() {
   return (
     <>
-      <PageHeader title="Testimonials" subtitle="Real stories from our happy customers" breadcrumbs={[{ label: 'Home', href: '/v1' }, { label: 'About', href: '/v1/organization' }]} />
+      <PageHeader title="Testimonials" subtitle="Real stories from our happy customers" breadcrumbs={[{ label: 'Home', href: '/' }, { label: 'About', href: '/organization' }]} />
       <div className="container-custom py-10 lg:py-16">
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {allTestimonials.map((t, i) => (

@@ -5,7 +5,7 @@ import { constructionSpecs } from '../mockData'
 export default function SpecificationsPage() {
   return (
     <>
-      <PageHeader title="Construction Specifications" subtitle="Premium materials and superior craftsmanship in every detail" breadcrumbs={[{ label: 'Home', href: '/v1' }, { label: 'Construction', href: '/v1/construction/projects' }]} />
+      <PageHeader title="Construction Specifications" subtitle="Premium materials and superior craftsmanship in every detail" breadcrumbs={[{ label: 'Home', href: '/' }, { label: 'Construction', href: '/construction/projects' }]} />
       <div className="container-custom py-10 lg:py-16">
         <div className="max-w-4xl mx-auto">
           <div className="space-y-4">

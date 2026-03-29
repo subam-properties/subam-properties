@@ -5,7 +5,7 @@ import { threeDDesigns } from '../mockData'
 export default function ThreeDDesignsPage() {
   return (
     <>
-      <PageHeader title="3D House Designs" subtitle="Explore our curated collection of modern house plans" breadcrumbs={[{ label: 'Home', href: '/v1' }, { label: 'Construction', href: '/v1/construction/projects' }]} />
+      <PageHeader title="3D House Designs" subtitle="Explore our curated collection of modern house plans" breadcrumbs={[{ label: 'Home', href: '/' }, { label: 'Construction', href: '/construction/projects' }]} />
       <div className="container-custom py-10 lg:py-16">
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {threeDDesigns.map((design, i) => (

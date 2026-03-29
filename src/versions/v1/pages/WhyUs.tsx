@@ -7,7 +7,7 @@ import { ProcessSteps } from '@/components/sections/ProcessSteps'
 export default function WhyUsPage() {
   return (
     <>
-      <PageHeader title="Why Us" subtitle="What makes Subam Properties the right choice for your investment" breadcrumbs={[{ label: 'Home', href: '/v1' }, { label: 'About', href: '/v1/organization' }]} />
+      <PageHeader title="Why Us" subtitle="What makes Subam Properties the right choice for your investment" breadcrumbs={[{ label: 'Home', href: '/' }, { label: 'About', href: '/organization' }]} />
       <div className="container-custom py-10 lg:py-16">
         <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="max-w-3xl mx-auto text-center mb-12">
           <p className="text-primary-600 leading-relaxed lg:text-lg">Choosing a real estate developer is one of the most important decisions you'll make. At Subam Properties, we don't just sell land — we build trust. Here's why thousands of families have chosen us as their preferred builder in Chennai.</p>

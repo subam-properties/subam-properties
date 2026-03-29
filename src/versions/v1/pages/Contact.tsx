@@ -6,7 +6,7 @@ import { Button, Input } from '@/components/ui'
 export default function ContactPage() {
   return (
     <>
-      <PageHeader title="Contact Us" subtitle="Get in touch — we'd love to hear from you" breadcrumbs={[{ label: 'Home', href: '/v1' }]} />
+      <PageHeader title="Contact Us" subtitle="Get in touch — we'd love to hear from you" breadcrumbs={[{ label: 'Home', href: '/' }]} />
       <div className="container-custom py-10 lg:py-16">
         <div className="grid lg:grid-cols-3 gap-8 lg:gap-12">
           {/* Contact Info */}

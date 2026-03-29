@@ -5,7 +5,7 @@ import { ProcessSteps } from '@/components/sections/ProcessSteps'
 export default function BookingPage() {
   return (
     <>
-      <PageHeader title="Booking Procedure" subtitle="Your step-by-step guide to owning a Subam property" breadcrumbs={[{ label: 'Home', href: '/v1' }]} />
+      <PageHeader title="Booking Procedure" subtitle="Your step-by-step guide to owning a Subam property" breadcrumbs={[{ label: 'Home', href: '/' }]} />
       <ProcessSteps />
       <div className="container-custom py-10 lg:py-16">
         <div className="max-w-4xl mx-auto">

@@ -5,7 +5,7 @@ import { Button, Input } from '@/components/ui'
 export default function InvestorsPage() {
   return (
     <>
-      <PageHeader title="Investors" subtitle="Grow your wealth with premium real estate investments" breadcrumbs={[{ label: 'Home', href: '/v1' }]} />
+      <PageHeader title="Investors" subtitle="Grow your wealth with premium real estate investments" breadcrumbs={[{ label: 'Home', href: '/' }]} />
       <div className="container-custom py-10 lg:py-16">
         <div className="grid lg:grid-cols-2 gap-10 lg:gap-16 mb-16">
           <motion.div initial={{ opacity: 0, x: -20 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }}>

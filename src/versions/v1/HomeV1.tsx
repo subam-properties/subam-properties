@@ -10,6 +10,7 @@ import { CityExplorer } from '@/components/sections/CityExplorer'
 import { Newsletter } from '@/components/sections/Newsletter'
 import { Footer } from '@/components/layout/Footer'
 import { FloatingCTA } from '@/components/sections/FloatingCTA'
+import { LeadPopup } from '@/components/sections/LeadPopup'
 import { usePathname } from '@/router'
 import { projects } from '@/lib/data'
 import { completedProjects, upcomingProjects, resaleProjects, acresProjects, houseProjects, villaProjects, premiumProjects } from './mockData'
@@ -30,49 +31,49 @@ import CareersPage from './pages/Careers'
 import BookingPage from './pages/Booking'
 
 const NAV_ITEMS: NavItem[] = [
-  { label: 'Home', href: '/v1' },
+  { label: 'Home', href: '/' },
   {
-    label: 'About', href: '/v1/organization',
+    label: 'About', href: '/organization',
     children: [
-      { label: 'Organization', href: '/v1/organization' },
-      { label: 'Executive Vision', href: '/v1/executive-vision' },
-      { label: 'Why Us', href: '/v1/why-us' },
-      { label: 'Testimonials', href: '/v1/testimonials' },
-      { label: 'CSR', href: '/v1/csr' },
+      { label: 'Organization', href: '/organization' },
+      { label: 'Executive Vision', href: '/executive-vision' },
+      { label: 'Why Us', href: '/why-us' },
+      { label: 'Testimonials', href: '/testimonials' },
+      { label: 'CSR', href: '/csr' },
     ],
   },
   {
-    label: 'Projects', href: '/v1/projects/ongoing',
+    label: 'Projects', href: '/projects/ongoing',
     children: [
-      { label: 'Ongoing Projects', href: '/v1/projects/ongoing' },
-      { label: 'Completed Projects', href: '/v1/projects/completed' },
-      { label: 'Upcoming Projects', href: '/v1/projects/upcoming' },
-      { label: 'Resale Projects', href: '/v1/projects/resale' },
-      { label: 'Acres & Cents', href: '/v1/projects/acres-cents' },
-      { label: 'House Projects', href: '/v1/projects/houses' },
-      { label: 'Villa Projects', href: '/v1/projects/villas' },
+      { label: 'Ongoing Projects', href: '/projects/ongoing' },
+      { label: 'Completed Projects', href: '/projects/completed' },
+      { label: 'Upcoming Projects', href: '/projects/upcoming' },
+      { label: 'Resale Projects', href: '/projects/resale' },
+      { label: 'Acres & Cents', href: '/projects/acres-cents' },
+      { label: 'House Projects', href: '/projects/houses' },
+      { label: 'Villa Projects', href: '/projects/villas' },
     ],
   },
   {
-    label: 'Construction', href: '/v1/construction/projects',
+    label: 'Construction', href: '/construction/projects',
     children: [
-      { label: 'Construction Projects', href: '/v1/construction/projects' },
-      { label: 'Specifications', href: '/v1/construction/specs' },
-      { label: '3D Designs', href: '/v1/construction/3d-designs' },
-      { label: 'Premium Projects', href: '/v1/construction/premium' },
+      { label: 'Construction Projects', href: '/construction/projects' },
+      { label: 'Specifications', href: '/construction/specs' },
+      { label: '3D Designs', href: '/construction/3d-designs' },
+      { label: 'Premium Projects', href: '/construction/premium' },
     ],
   },
-  { label: 'Investors', href: '/v1/investors' },
-  { label: 'Blog', href: '/v1/blog' },
-  { label: 'Gallery', href: '/v1/gallery' },
-  { label: 'Contact', href: '/v1/contact' },
+  { label: 'Investors', href: '/investors' },
+  { label: 'Blog', href: '/blog' },
+  { label: 'Gallery', href: '/gallery' },
+  { label: 'Contact', href: '/contact' },
 ]
 
 function HomeContent() {
   return (
     <>
       <Hero />
-      <AboutPreview learnMoreHref="/v1/organization" />
+      <AboutPreview learnMoreHref="/organization" />
       <FeaturedProjects />
       <Stats />
       <CityExplorer />
@@ -89,44 +90,45 @@ export default function V1Layout() {
 
   const renderPage = () => {
     switch (pathname) {
-      case '/v1': return <HomeContent />
+      case '/': return <HomeContent />
       // About
-      case '/v1/organization': return <OrganizationPage />
-      case '/v1/executive-vision': return <ExecutiveVisionPage />
-      case '/v1/why-us': return <WhyUsPage />
-      case '/v1/testimonials': return <TestimonialsFullPage />
-      case '/v1/csr': return <CSRPage />
+      case '/organization': return <OrganizationPage />
+      case '/executive-vision': return <ExecutiveVisionPage />
+      case '/why-us': return <WhyUsPage />
+      case '/testimonials': return <TestimonialsFullPage />
+      case '/csr': return <CSRPage />
       // Projects
-      case '/v1/projects/ongoing': return <ProjectListing title="Ongoing Projects" subtitle="Premium residential projects currently under development" projects={projects} />
-      case '/v1/projects/completed': return <ProjectListing title="Completed Projects" subtitle="Successfully delivered projects with happy families" projects={completedProjects} />
-      case '/v1/projects/upcoming': return <ProjectListing title="Upcoming Projects" subtitle="Exciting new projects launching soon" projects={upcomingProjects} />
-      case '/v1/projects/resale': return <ProjectListing title="Resale Projects" subtitle="Pre-owned plots available for immediate registration" projects={resaleProjects} />
-      case '/v1/projects/acres-cents': return <ProjectListing title="Acres & Cents" subtitle="Large land parcels for development and investment" projects={acresProjects} />
-      case '/v1/projects/houses': return <ProjectListing title="House Projects" subtitle="Ready-built individual houses for your family" projects={houseProjects} />
-      case '/v1/projects/villas': return <ProjectListing title="Villa Projects" subtitle="Luxury villa communities with premium amenities" projects={villaProjects} />
+      case '/projects/ongoing': return <ProjectListing title="Ongoing Projects" subtitle="Premium residential projects currently under development" projects={projects} />
+      case '/projects/completed': return <ProjectListing title="Completed Projects" subtitle="Successfully delivered projects with happy families" projects={completedProjects} />
+      case '/projects/upcoming': return <ProjectListing title="Upcoming Projects" subtitle="Exciting new projects launching soon" projects={upcomingProjects} />
+      case '/projects/resale': return <ProjectListing title="Resale Projects" subtitle="Pre-owned plots available for immediate registration" projects={resaleProjects} />
+      case '/projects/acres-cents': return <ProjectListing title="Acres & Cents" subtitle="Large land parcels for development and investment" projects={acresProjects} />
+      case '/projects/houses': return <ProjectListing title="House Projects" subtitle="Ready-built individual houses for your family" projects={houseProjects} />
+      case '/projects/villas': return <ProjectListing title="Villa Projects" subtitle="Luxury villa communities with premium amenities" projects={villaProjects} />
       // Construction
-      case '/v1/construction/projects': return <ProjectListing title="Construction Projects" subtitle="Ongoing and completed construction works" projects={[...projects, ...completedProjects]} />
-      case '/v1/construction/specs': return <SpecificationsPage />
-      case '/v1/construction/3d-designs': return <ThreeDDesignsPage />
-      case '/v1/construction/premium': return <ProjectListing title="Premium Projects" subtitle="Ultra-luxury developments for discerning buyers" projects={premiumProjects} />
+      case '/construction/projects': return <ProjectListing title="Construction Projects" subtitle="Ongoing and completed construction works" projects={[...projects, ...completedProjects]} />
+      case '/construction/specs': return <SpecificationsPage />
+      case '/construction/3d-designs': return <ThreeDDesignsPage />
+      case '/construction/premium': return <ProjectListing title="Premium Projects" subtitle="Ultra-luxury developments for discerning buyers" projects={premiumProjects} />
       // Other
-      case '/v1/investors': return <InvestorsPage />
-      case '/v1/blog': return <BlogPage />
-      case '/v1/gallery': return <GalleryPage />
-      case '/v1/contact': return <ContactPage />
-      case '/v1/careers': return <CareersPage />
-      case '/v1/booking': return <BookingPage />
+      case '/investors': return <InvestorsPage />
+      case '/blog': return <BlogPage />
+      case '/gallery': return <GalleryPage />
+      case '/contact': return <ContactPage />
+      case '/careers': return <CareersPage />
+      case '/booking': return <BookingPage />
       default: return <HomeContent />
     }
   }
 
   return (
     <div className="min-h-screen flex flex-col">
-      <VersionNavbar items={NAV_ITEMS} />
+      <VersionNavbar items={NAV_ITEMS} isProduction />
       <main className="flex-grow">
         {renderPage()}
       </main>
       <Footer />
+      <LeadPopup />
       <FloatingCTA />
     </div>
   )

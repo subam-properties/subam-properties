@@ -4,7 +4,7 @@ import { PageHeader } from '../PageHeader'
 export default function OrganizationPage() {
   return (
     <>
-      <PageHeader title="Organization" subtitle="Our story, mission, and the values that drive us" breadcrumbs={[{ label: 'Home', href: '/v1' }, { label: 'About', href: '/v1/organization' }]} />
+      <PageHeader title="Organization" subtitle="Our story, mission, and the values that drive us" breadcrumbs={[{ label: 'Home', href: '/' }, { label: 'About', href: '/organization' }]} />
       <div className="container-custom py-10 lg:py-16">
         {/* Company Story */}
         <div className="grid lg:grid-cols-2 gap-10 lg:gap-16 items-center mb-16">

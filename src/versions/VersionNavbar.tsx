@@ -14,9 +14,10 @@ export interface NavItem {
 interface VersionNavbarProps {
   items: NavItem[]
   backTo?: string
+  isProduction?: boolean
 }
 
-export function VersionNavbar({ items, backTo = '/versions' }: VersionNavbarProps) {
+export function VersionNavbar({ items, backTo = '/versions', isProduction = false }: VersionNavbarProps) {
   const [isScrolled, setIsScrolled] = useState(false)
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
   const [openDropdown, setOpenDropdown] = useState<string | null>(null)
@@ -52,12 +53,14 @@ export function VersionNavbar({ items, backTo = '/versions' }: VersionNavbarProp
       'fixed top-0 left-0 right-0 z-50 transition-all duration-300',
       isScrolled || !isHome || isMobileMenuOpen ? 'bg-white shadow-md' : 'bg-transparent'
     )}>
-      {/* Version banner */}
-      <div className="bg-accent text-primary-900 text-center py-1 text-xs font-medium">
-        <Link href={backTo} className="hover:underline">&larr; Back to Version Picker</Link>
-        <span className="mx-2">|</span>
-        Preview Mode
-      </div>
+      {/* Version banner - only in preview mode */}
+      {!isProduction && (
+        <div className="bg-accent text-primary-900 text-center py-1 text-xs font-medium">
+          <Link href={backTo} className="hover:underline">&larr; Back to Version Picker</Link>
+          <span className="mx-2">|</span>
+          Preview Mode
+        </div>
+      )}
 
       <nav className="container-custom" ref={dropdownRef}>
         <div className="flex items-center justify-between h-16 lg:h-20">

@@ -4,7 +4,7 @@ import { PageHeader } from '../PageHeader'
 export default function ExecutiveVisionPage() {
   return (
     <>
-      <PageHeader title="Executive Vision" subtitle="Meet the leadership behind Subam Properties" breadcrumbs={[{ label: 'Home', href: '/v1' }, { label: 'About', href: '/v1/organization' }]} />
+      <PageHeader title="Executive Vision" subtitle="Meet the leadership behind Subam Properties" breadcrumbs={[{ label: 'Home', href: '/' }, { label: 'About', href: '/organization' }]} />
       <div className="container-custom py-10 lg:py-16">
         {/* Founder */}
         <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="grid lg:grid-cols-3 gap-8 lg:gap-12 mb-16">

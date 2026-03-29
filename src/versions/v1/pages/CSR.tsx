@@ -4,7 +4,7 @@ import { PageHeader } from '../PageHeader'
 export default function CSRPage() {
   return (
     <>
-      <PageHeader title="CSR Initiatives" subtitle="Building communities beyond homes" breadcrumbs={[{ label: 'Home', href: '/v1' }, { label: 'About', href: '/v1/organization' }]} />
+      <PageHeader title="CSR Initiatives" subtitle="Building communities beyond homes" breadcrumbs={[{ label: 'Home', href: '/' }, { label: 'About', href: '/organization' }]} />
       <div className="container-custom py-10 lg:py-16">
         <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="max-w-3xl mx-auto text-center mb-12">
           <p className="text-primary-600 leading-relaxed lg:text-lg">At Subam Properties, we believe in giving back to the communities we serve. Our CSR initiatives focus on education, environmental sustainability, and community welfare across Chennai's growing neighborhoods.</p>

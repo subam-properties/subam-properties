@@ -11,7 +11,7 @@ export default function GalleryPage() {
 
   return (
     <>
-      <PageHeader title="Gallery" subtitle="A visual journey through our projects and events" breadcrumbs={[{ label: 'Home', href: '/v1' }]} />
+      <PageHeader title="Gallery" subtitle="A visual journey through our projects and events" breadcrumbs={[{ label: 'Home', href: '/' }]} />
       <div className="container-custom py-10 lg:py-16">
         {/* Filter tabs */}
         <div className="flex flex-wrap gap-2 mb-8">

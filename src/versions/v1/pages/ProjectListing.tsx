@@ -12,7 +12,7 @@ interface ProjectListingProps {
 export default function ProjectListing({ title, subtitle, projects }: ProjectListingProps) {
   return (
     <>
-      <PageHeader title={title} subtitle={subtitle} breadcrumbs={[{ label: 'Home', href: '/v1' }, { label: 'Projects', href: '/v1/projects/ongoing' }]} />
+      <PageHeader title={title} subtitle={subtitle} breadcrumbs={[{ label: 'Home', href: '/' }, { label: 'Projects', href: '/projects/ongoing' }]} />
       <div className="container-custom py-10 lg:py-16">
         {projects.length > 0 ? (
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-6">
