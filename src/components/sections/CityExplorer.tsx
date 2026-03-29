@@ -1,15 +1,13 @@
-'use client'
-
-import Link from 'next/link'
+import { Link } from '@/router'
 import { motion } from 'framer-motion'
 import { cities } from '@/lib/data'
 import { Container } from '@/components/layout'
 
 export function CityExplorer() {
   return (
-    <section className="section-padding bg-cream-100">
+    <section className="py-12 md:py-16 lg:py-24 bg-cream-100">
       <Container>
-        <div className="text-center mb-12">
+        <div className="text-center mb-8 lg:mb-12">
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -29,7 +27,8 @@ export function CityExplorer() {
           </motion.p>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        {/* Mobile: stacked cards. Desktop: wide horizontal cards */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-6">
           {cities.map((city, index) => (
             <motion.div
               key={city.slug}
@@ -40,7 +39,7 @@ export function CityExplorer() {
             >
               <Link
                 href={`/projects?city=${city.slug}`}
-                className="group relative block h-72 rounded-2xl overflow-hidden"
+                className="group relative block h-56 sm:h-64 lg:h-80 rounded-2xl overflow-hidden"
               >
                 <img
                   src={city.image}
@@ -48,15 +47,16 @@ export function CityExplorer() {
                   className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-primary-900/90 via-primary-900/40 to-transparent" />
-                <div className="absolute bottom-0 left-0 right-0 p-6">
-                  <h3 className="text-2xl font-heading font-bold text-white mb-1">
+                <div className="absolute bottom-0 left-0 right-0 p-4 lg:p-6">
+                  <h3 className="text-xl lg:text-2xl font-heading font-bold text-white mb-1">
                     {city.name}
                   </h3>
-                  <p className="text-primary-200">
+                  <p className="text-primary-200 text-sm lg:text-base">
                     {city.projectCount} Projects
                   </p>
                 </div>
-                <div className="absolute top-4 right-4 w-10 h-10 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+                {/* Desktop hover arrow */}
+                <div className="absolute top-4 right-4 w-10 h-10 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                   <svg
                     className="w-5 h-5 text-white"
                     fill="none"

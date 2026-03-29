@@ -1,14 +1,12 @@
-'use client'
-
 import { motion } from 'framer-motion'
 import { testimonials } from '@/lib/data'
 import { Container } from '@/components/layout'
 
 export function Testimonials() {
   return (
-    <section className="section-padding bg-primary-900">
+    <section className="py-12 md:py-16 lg:py-24 bg-primary-900">
       <Container>
-        <div className="text-center mb-12">
+        <div className="text-center mb-8 lg:mb-14">
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -28,7 +26,8 @@ export function Testimonials() {
           </motion.p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        {/* Mobile: single column. Tablet: 2 cols. Desktop: 4 cols */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-6">
           {testimonials.map((testimonial, index) => (
             <motion.div
               key={testimonial.id}
@@ -36,14 +35,14 @@ export function Testimonials() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.1 }}
-              className="bg-primary-800 p-6 rounded-2xl"
+              className="bg-primary-800 p-5 lg:p-6 rounded-xl lg:rounded-2xl"
             >
               {/* Stars */}
-              <div className="flex gap-1 mb-4">
+              <div className="flex gap-1 mb-3 lg:mb-4">
                 {Array.from({ length: testimonial.rating }).map((_, i) => (
                   <svg
                     key={i}
-                    className="w-5 h-5 text-accent"
+                    className="w-4 h-4 lg:w-5 lg:h-5 text-accent"
                     fill="currentColor"
                     viewBox="0 0 20 20"
                   >
@@ -52,19 +51,22 @@ export function Testimonials() {
                 ))}
               </div>
 
+              {/* Desktop: large quote mark */}
+              <div className="hidden lg:block text-accent/30 text-5xl font-serif leading-none mb-2">&ldquo;</div>
+
               {/* Content */}
-              <p className="text-primary-100 mb-6 leading-relaxed text-sm">
-                &ldquo;{testimonial.content}&rdquo;
+              <p className="text-primary-100 mb-4 lg:mb-6 leading-relaxed text-sm lg:text-sm">
+                <span className="lg:hidden">&ldquo;</span>{testimonial.content}<span className="lg:hidden">&rdquo;</span>
               </p>
 
               {/* Author */}
               <div className="flex items-center gap-3">
-                <div className="w-12 h-12 bg-accent rounded-full flex items-center justify-center text-primary-900 font-bold text-lg">
+                <div className="w-10 h-10 lg:w-12 lg:h-12 bg-accent rounded-full flex items-center justify-center text-primary-900 font-bold text-sm lg:text-lg">
                   {testimonial.name.charAt(0)}
                 </div>
                 <div>
-                  <p className="font-semibold text-white">{testimonial.name}</p>
-                  <p className="text-primary-300 text-sm">
+                  <p className="font-semibold text-white text-sm lg:text-base">{testimonial.name}</p>
+                  <p className="text-primary-300 text-xs lg:text-sm">
                     {testimonial.project}, {testimonial.location}
                   </p>
                 </div>

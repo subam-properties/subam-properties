@@ -1,6 +1,4 @@
-'use client'
-
-import Link from 'next/link'
+import { Link } from '@/router'
 import { motion } from 'framer-motion'
 import { getFeaturedProjects } from '@/lib/data'
 import { Container } from '@/components/layout'
@@ -11,9 +9,9 @@ export function FeaturedProjects() {
   const projects = getFeaturedProjects()
 
   return (
-    <section className="section-padding bg-white">
+    <section className="py-12 md:py-16 lg:py-24 bg-white">
       <Container>
-        <div className="flex flex-col md:flex-row md:items-end justify-between mb-12">
+        <div className="flex flex-col md:flex-row md:items-end justify-between mb-8 lg:mb-12">
           <div>
             <motion.h2
               initial={{ opacity: 0, y: 20 }}
@@ -46,7 +44,8 @@ export function FeaturedProjects() {
           </motion.div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        {/* Mobile: single column. Tablet: 2 cols. Desktop: 3-4 cols */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 lg:gap-6">
           {projects.map((project, index) => (
             <motion.div
               key={project.id}

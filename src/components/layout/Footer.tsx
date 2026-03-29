@@ -1,4 +1,4 @@
-import Link from 'next/link'
+import { Link } from '@/router'
 import { COMPANY, SOCIAL_LINKS, NAV_LINKS, CITIES } from '@/lib/constants'
 
 export function Footer() {
@@ -108,7 +108,7 @@ export function Footer() {
         <div className="mt-12 pt-8 border-t border-primary-800">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-primary-300 text-sm">
-              © {new Date().getFullYear()} Subam Properties. All rights reserved.
+              &copy; {new Date().getFullYear()} Subam Properties. All rights reserved.
             </p>
             <div className="flex gap-6 text-sm text-primary-300">
               <Link href="/privacy" className="hover:text-accent transition-colors">
