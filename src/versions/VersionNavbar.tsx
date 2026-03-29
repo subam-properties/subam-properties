@@ -135,17 +135,19 @@ export function VersionNavbar({ items, backTo = '/versions', isProduction = fals
           </div>
 
           {/* Desktop CTA */}
-          <div className="hidden lg:flex items-center gap-4">
+          <div className="hidden lg:flex items-center gap-3">
             <a href={`tel:${COMPANY.phone.replace(/\s/g, '')}`} className={cn(
-              'flex items-center gap-2 text-sm font-medium transition-colors',
-              isScrolled || !isHome ? 'text-primary-700' : 'text-white/90'
+              'inline-flex items-center gap-1.5 text-sm font-medium transition-colors whitespace-nowrap',
+              isScrolled || !isHome ? 'text-primary-700 hover:text-primary-900' : 'text-white/90 hover:text-white'
             )}>
-              <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+              <svg className="w-4 h-4 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                 <path strokeLinecap="round" strokeLinejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
               </svg>
               {COMPANY.phone}
             </a>
-            <Button variant="accent" size="sm">Enquire Now</Button>
+            <a href={`tel:${COMPANY.phone.replace(/\s/g, '')}`}>
+              <Button variant="accent" size="sm">Enquire Now</Button>
+            </a>
           </div>
 
           {/* Mobile hamburger */}
@@ -203,7 +205,9 @@ export function VersionNavbar({ items, backTo = '/versions', isProduction = fals
                   </div>
                 ))}
                 <div className="px-4 pt-2">
-                  <Button variant="accent" className="w-full">Enquire Now</Button>
+                  <a href={`tel:${COMPANY.phone.replace(/\s/g, '')}`}>
+                    <Button variant="accent" className="w-full">Enquire Now</Button>
+                  </a>
                 </div>
               </div>
             </motion.div>
