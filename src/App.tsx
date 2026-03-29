@@ -6,12 +6,30 @@ import { FloatingCTA } from './components/sections/FloatingCTA'
 import HomePage from './pages/Home'
 import ProjectsPage from './pages/Projects'
 import ProjectDetailPage from './pages/ProjectDetail'
+import VersionPicker from './versions/VersionPicker'
+import V1Layout from './versions/v1/HomeV1'
+import V2Layout from './versions/v2/HomeV2'
+import V3Layout from './versions/v3/HomeV3'
 
 function AppContent() {
   const pathname = usePathname()
 
-  let page: React.ReactNode
+  // Version routes — standalone layouts (own navbar/footer)
+  if (pathname === '/versions') {
+    return <VersionPicker />
+  }
+  if (pathname.startsWith('/v1')) {
+    return <V1Layout />
+  }
+  if (pathname.startsWith('/v2')) {
+    return <V2Layout />
+  }
+  if (pathname.startsWith('/v3')) {
+    return <V3Layout />
+  }
 
+  // Main site routes
+  let page: React.ReactNode
   const projectDetailMatch = pathname.match(/^\/projects\/([^/]+)\/([^/]+)\/?$/)
 
   if (pathname === '/') {
