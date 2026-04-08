@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion'
 import { PageHeader } from '../PageHeader'
-import { COMPANY } from '@/lib/constants'
+import { COMPANY, GOOGLE_MAPS_URL, GOOGLE_MAPS_EMBED } from '@/lib/constants'
 import { Button, Input } from '@/components/ui'
 
 export default function ContactPage() {
@@ -75,14 +75,23 @@ export default function ContactPage() {
               </form>
             </div>
 
-            {/* Map placeholder */}
-            <div className="mt-6 bg-primary-100 rounded-2xl h-64 lg:h-80 flex items-center justify-center">
-              <div className="text-center text-primary-500">
-                <svg className="w-12 h-12 mx-auto mb-2 opacity-50" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1}><path strokeLinecap="round" strokeLinejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" /><path strokeLinecap="round" strokeLinejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" /></svg>
-                <p className="font-medium">Google Maps Embed</p>
-                <p className="text-sm">115, GST Main Road, Guduvancheri</p>
-              </div>
+            {/* Google Map */}
+            <div className="mt-6 rounded-2xl overflow-hidden h-64 lg:h-80">
+              <iframe
+                src={GOOGLE_MAPS_EMBED}
+                width="100%"
+                height="100%"
+                style={{ border: 0 }}
+                allowFullScreen
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                title="Subam Properties Office Location"
+              />
             </div>
+            <a href={GOOGLE_MAPS_URL} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 mt-3 text-accent text-sm font-medium hover:underline">
+              <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" /><path strokeLinecap="round" strokeLinejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" /></svg>
+              Open in Google Maps
+            </a>
           </motion.div>
         </div>
       </div>
