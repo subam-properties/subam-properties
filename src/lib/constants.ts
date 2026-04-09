@@ -14,7 +14,7 @@ export const SOCIAL_LINKS = {
 };
 
 export const GOOGLE_MAPS_URL = "https://maps.app.goo.gl/Gnnb71yjELyDstHt9";
-export const GOOGLE_MAPS_EMBED = "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3890.2!2d80.065!3d12.845!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTLCsDUwJzQyLjAiTiA4MMKwMDMnNTQuMCJF!5e0!3m2!1sen!2sin!4v1";
+export const GOOGLE_MAPS_EMBED = "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3890.5!2d80.0614!3d12.8437!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a52f7a1aa578ce1%3A0x1ae6acd71e94a809!2sSubam%20Housing%20and%20Properties!5e0!3m2!1sen!2sin!4v1";
 
 export const NAV_LINKS = [
   { label: "Home", href: "/" },
